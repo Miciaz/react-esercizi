@@ -4,7 +4,7 @@ import { Welcome } from "./Welcome";
 export function App() {
   return (
     <div>
-      <Welcome name='Rossella' age={30}/>
+      <Welcome name='John' age={38}/>
       <Messagge />
     </div>
   );
