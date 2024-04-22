@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { CounterDisplay } from "./CounterDisplay";
 
-function Counter() {
-  const [counter, setCounter] = useState(0);
+function Counter({initialValue = 0}) {
+  const [counter, setCounter] = useState(initialValue);
 
   function handleCounterIncrement() {
     setCounter((c) => c + 1)
@@ -13,7 +13,7 @@ function Counter() {
   }
 
   function handleCounterReset() {
-    setCounter(0)
+    setCounter(initialValue)
   }
 
   return (
