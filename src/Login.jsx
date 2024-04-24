@@ -1,6 +1,6 @@
 import { useState } from "react"
 
-export function Login() {
+export function Login({onLogin}) {
     function createData() {
         return {
             username: '',
@@ -29,12 +29,20 @@ export function Login() {
         setData(createData())
     }
 
+    function handleLogin(event) {
+        event.preventDefault()
+        console.log(data)
+
+        onLogin(data)
+    }
+
     return (
-        <div>
+        <form onSubmit={handleLogin}>
             <input name="username" type="text" value={data.username} onChange={handleInputChange} />
             <input name="password" type="password" value={data.password} onChange={handleInputChange} />
             <input name="session" type="checkbox" checked={data.session} onChange={handleInputChange} />
+            <button disabled={!data.username || !data.password}>Login</button>
             <button onClick={handleReset}>Reset</button>
-        </div>
+        </form>
     )
 }
