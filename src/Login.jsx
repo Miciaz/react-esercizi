@@ -1,0 +1,40 @@
+import { useState } from "react"
+
+export function Login() {
+    function createData() {
+        return {
+            username: '',
+            password: '',
+            session: false
+        }
+    }
+
+    const [data, setData] = useState(createData())
+
+    function handleInputChange(event) {
+        const value = event.target.value
+        const name = event.target.name
+        const checked = event.target.checked
+        const type = event.target.type
+
+        setData(data => {
+            return {
+                ...data,
+                [name]: type === 'checkbox' ? checked : value
+            }
+        })
+    }
+
+    function handleReset() {
+        setData(createData())
+    }
+
+    return (
+        <div>
+            <input name="username" type="text" value={data.username} onChange={handleInputChange} />
+            <input name="password" type="password" value={data.password} onChange={handleInputChange} />
+            <input name="session" type="checkbox" checked={data.session} onChange={handleInputChange} />
+            <button onClick={handleReset}>Reset</button>
+        </div>
+    )
+}
