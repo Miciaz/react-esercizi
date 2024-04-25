@@ -4,6 +4,7 @@ import Counter from "./Counter";
 import { Messagge } from "./HelloWorld";
 import { Login } from "./Login";
 import { MouseClicker } from "./MouseClicker";
+import { UncontrolledLogin } from "./UncontrolledLogin";
 import { Welcome } from "./Welcome";
 
 export function App() {
@@ -20,6 +21,8 @@ export function App() {
       <MouseClicker />
       <hr />
       <Login /> 
+      <hr />
+      <UncontrolledLogin />
     </div>
   );
 }

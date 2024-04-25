@@ -36,6 +36,7 @@ export function Login({}) {
 
     return (
         <form onSubmit={handleLogin}>
+            <p>Controlled Login</p>
             <input name="username" type="text" value={data.username} onChange={handleInputChange} />
             <input name="password" type="password" value={data.password} onChange={handleInputChange} />
             <input name="session" type="checkbox" checked={data.session} onChange={handleInputChange} />
