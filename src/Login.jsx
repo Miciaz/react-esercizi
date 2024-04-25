@@ -1,6 +1,6 @@
 import { useState } from "react"
 
-export function Login({onLogin}) {
+export function Login({}) {
     function createData() {
         return {
             username: '',
@@ -32,8 +32,6 @@ export function Login({onLogin}) {
     function handleLogin(event) {
         event.preventDefault()
         console.log(data)
-
-        onLogin(data)
     }
 
     return (
