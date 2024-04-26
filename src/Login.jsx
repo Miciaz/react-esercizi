@@ -1,14 +1,14 @@
-import { useState } from "react"
+import { useEffect, useRef, useState } from "react"
+
+function createData() {
+    return {
+        username: '',
+        password: '',
+        session: false
+    }
+}
 
 export function Login({}) {
-    function createData() {
-        return {
-            username: '',
-            password: '',
-            session: false
-        }
-    }
-
     const [data, setData] = useState(createData())
 
     function handleInputChange(event) {
