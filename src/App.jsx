@@ -6,6 +6,7 @@ import { FocusableInput } from "./FocusableInput";
 import { Messagge } from "./HelloWorld";
 import { Login } from "./Login";
 import { MouseClicker } from "./MouseClicker";
+import { ToDoList } from "./ToDoList";
 import { UncontrolledLogin } from "./UncontrolledLogin";
 import { Welcome } from "./Welcome";
 
@@ -37,6 +38,8 @@ export function App() {
           { id: 5, name: "black" },
         ]}
       />
+      <hr />
+      <ToDoList />
     </div>
   );
 }
