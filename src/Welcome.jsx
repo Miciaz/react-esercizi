@@ -1,7 +1,7 @@
 export function Welcome({ name, age }) {
   return (
     <div className="welcome">
-      <p>
+      <p className="text-3xl font-bold underline">
         Welcome, <strong>{name}!</strong>
       </p>
       {age > 18 && <Age age={age} />}
