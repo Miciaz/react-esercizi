@@ -1,21 +1,19 @@
-import { AlertClock } from "./AlertClock";
-import { Clock } from "./Clock";
-import { Color } from "./Color";
-import { Container } from "./Container";
-import Counter from "./Counter";
-import { FocusableInput } from "./FocusableInput";
-import { Messagge } from "./HelloWorld";
-import { Login } from "./Login";
-import { MouseClicker } from "./MouseClicker";
-import { ToDoList } from "./ToDoList";
-import { UncontrolledLogin } from "./UncontrolledLogin";
-import { Welcome } from "./Welcome";
+import { Container } from "./Component-composition/Container";
+import { Welcome } from './Welcome'
+import { AlertClock } from './AlertClock'
+import Counter from './State-2_Refs/Counter'
+import { Clock } from './Clock'
+import { MouseClicker } from './Handling-event/MouseClicker'
+import { Login } from './Controlled-form/Login'
+import { UncontrolledLogin } from "./uncontrolled-form/UncontrolledLogin";
+import { FocusableInput } from './State-2_Refs/FocusableInput'
+import { Color } from './lists/Color'
+import { ToDoList } from "./List-and-State/ToDoList";
 
 export function App() {
   return (
     <Container title={<h1>App Container</h1>}>
       <Welcome name="John" age={15} />
-      <Messagge />
       <AlertClock />
       <hr />
       <Counter />
