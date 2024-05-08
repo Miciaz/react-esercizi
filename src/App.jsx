@@ -11,6 +11,7 @@ import { Color } from "./lists/Color";
 import { ToDoList } from "./List-and-State/ToDoList";
 import { LanguageContext } from "./context/LanguageContext";
 import { useState } from "react";
+import { GithubUsers } from "./Data-fetching/Githubusers";
 
 export function App() {
   const [language, setLanguage] = useState("en");
@@ -54,6 +55,8 @@ export function App() {
         />
         <hr />
         <ToDoList />
+        <hr />
+        <GithubUsers />
       </Container>
     </div>
   );
