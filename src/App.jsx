@@ -12,6 +12,7 @@ import { ToDoList } from "./List-and-State/ToDoList";
 import { LanguageContext } from "./context/LanguageContext";
 import { useState } from "react";
 import { GithubUsers } from "./Data-fetching/Githubusers";
+import { HookGithubUser } from "./Custom-hook3/HookGithubUser";
 
 export function App() {
   const [language, setLanguage] = useState("en");
@@ -57,6 +58,8 @@ export function App() {
         <ToDoList />
         <hr />
         <GithubUsers />
+        <hr />
+        <HookGithubUser username='Miciaz'/>
       </Container>
     </div>
   );
