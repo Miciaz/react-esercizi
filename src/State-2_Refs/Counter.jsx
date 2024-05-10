@@ -4,6 +4,7 @@ import { CounterDisplay } from "./CounterDisplay";
 function Counter({initialValue = 0}) {
   const [counter, setCounter] = useState(initialValue);
 
+  //-----parte relativa all'esercizio Refs------
   const directionRef = useRef(null);
   const prevCounterRef = useRef(null);
   
@@ -24,6 +25,7 @@ function Counter({initialValue = 0}) {
       console.log(`Direction of change: ${directionRef.current}`);
     }
   }, [directionRef.current]);
+  //-----fine parte esercizio refs-------
 
   function handleCounterIncrement() {
     setCounter((c) => c + 1)
