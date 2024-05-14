@@ -1,0 +1,25 @@
+{
+	"folders": [
+		{
+			"path": "../../../../Develhope"
+		},
+		{
+			"path": "../../.."
+		},
+		{
+			"path": "../../../../FC24-project"
+		},
+		{
+			"path": "../../../../Es-FS27"
+		},
+		{
+			"path": "../../../../FS25-Team1-Project4"
+		},
+		{
+			"path": "../../../../Classe-FS-25"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Develhope"
+	}
+}
