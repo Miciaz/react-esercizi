@@ -7,12 +7,19 @@ import { MouseClicker } from "./Handling-event/MouseClicker";
 import { Login } from "./Controlled-form/Login";
 import { UncontrolledLogin } from "./uncontrolled-form/UncontrolledLogin";
 import { FocusableInput } from "./State-2_Refs/FocusableInput";
-import { Color } from "./lists/Color";
 import { ToDoList } from "./List-and-State/ToDoList";
 import { LanguageContext } from "./context/LanguageContext";
 import { useState } from "react";
 import { GithubUsers } from "./Data-fetching/Githubusers";
 import { HookGithubUser } from "./Custom-hook3/HookGithubUser";
+import { Colors } from "./lists/Colors";
+
+//array per il componente Colors
+const colors = [
+  { id: 1, name: 'Red' },
+  { id: 2, name: 'Green' },
+  { id: 3, name: 'Blue' },
+];
 
 export function App() {
   const [language, setLanguage] = useState("en");
@@ -45,15 +52,7 @@ export function App() {
         <hr />
         <FocusableInput />
         <hr />
-        <Color
-          items={[
-            { id: 1, name: "green" },
-            { id: 2, name: "yellow" },
-            { id: 3, name: "red" },
-            { id: 4, name: "blue" },
-            { id: 5, name: "black" },
-          ]}
-        />
+        <Colors colors={colors}/>
         <hr />
         <ToDoList />
         <hr />
