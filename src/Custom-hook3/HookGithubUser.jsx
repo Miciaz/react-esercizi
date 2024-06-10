@@ -1,7 +1,10 @@
-import { useGithubUser } from "./useGithubUser";
+import { useGithubUserSwr } from "../swr/useGithubUserSwr";
+/* import { useGithubUserSwrFetcher } from "../swr/useGithubUserSwrFetcher"; */
 
 export function HookGithubUser({ username }) {
-  const { data, error, loading } = useGithubUser(username);
+  const { data, error, loading } = useGithubUserSwr(username);
+  /* const { data, error, loading } = useGithubUserSwrFetcher(username); */
+  
 
   return (
     <div>

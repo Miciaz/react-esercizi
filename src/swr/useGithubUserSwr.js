@@ -1,6 +1,6 @@
 import useSWR from 'swr';
 
-export function useGithubUser(username) {
+export function useGithubUserSwr(username) {
   if (!username) {
     return { data: null, error: null, loading: false };
   }
